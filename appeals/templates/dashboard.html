@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | UniPortal</title>
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">UniPortal</div>
+    <div class="nav-links">
+        <a href="{% url 'submit_appeal' %}" class="submit-btn">Submit Appeal</a>
+        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+    </div>
+</nav>
+
+<section class="dashboard-container">
+
+   <h1>Your Appeals</h1>
+
+<div class="card-grid">
+    {% for post in posts reversed %}
+        <div class="appeal-card">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.body }}</p>
+        </div>
+    {% empty %}
+        <p>No posts submitted yet.</p>
+    {% endfor %}
+</div>
+
+</section>
+
+</body>
+</html>

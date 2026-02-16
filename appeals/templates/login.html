@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Portal Login</h2>
+        <p>Access your student appeal account</p>
+
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

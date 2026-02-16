@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Home | UniPortal{% endblock %}
+
+{% block content %}
+
+<nav class="navbar">
+    <div class="logo">UniPortal</div>
+    <div class="nav-links">
+    <a href="{% url 'login' %}" class="login-btn">Login</a>
+    <a href="{% url 'signup' %}" class="signup-btn">Sign Up</a>
+</div>
+
+
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Student Appeal Management System</h1>
+        <p>
+            Securely submit and track academic appeals, complaints,
+            and administrative requests through the university system.
+        </p>
+        <a href="{% url 'login' %}" class="primary-btn">Access Portal</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>Secure Access</h3>
+        <p>Authentication required to submit and manage appeals.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Status Tracking</h3>
+        <p>Monitor the progress of your appeal in real time.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Administrative Review</h3>
+        <p>Faculty and staff evaluate submissions systematically.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 University Appeal Portal. All rights reserved.</p>
+</footer>
+
+{% endblock %}

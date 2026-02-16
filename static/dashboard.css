@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.submit-btn {
+    background: #1e3a8a;
+    color: white;
+}
+
+.logout-btn {
+    border: 1px solid #1e3a8a;
+    color: #1e3a8a;
+}
+
+/* DASHBOARD */
+.dashboard-container {
+    padding: 40px 80px;
+}
+
+.dashboard-container h1 {
+    margin-bottom: 30px;
+}
+
+/* CARD GRID */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.appeal-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+}
+
+.appeal-card:hover {
+    transform: translateY(-5px);
+}
+
+.appeal-card h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.appeal-card p {
+    color: #6b7280;
+    font-size: 14px;
+}
